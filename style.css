@@ -1,0 +1,127 @@
+/* ---- CSS RESET BELOW --- */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/* --- END OF CSS RESET --- */
+
+/* VARIABLES */
+:root {
+    /* colors  */
+   --slate-900: hsl(218, 44%, 22%);
+   --slate-500: hsl(216, 15%, 48%);
+   --slate-300: hsl(212, 45%, 89%);
+   --white: hsl(0, 0%, 100%);
+
+   /* spacing */
+   --spacing-500: 40px;
+   --spacing-300: 24px;
+   --spacing-200: 16px;
+}
+/* END VARIABLES */
+html {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--slate-300);
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100svh - 72px);
+}
+.attribution {
+  margin: auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  background-color: var(--white);
+  width: 320px;
+  padding-inline: var(--spacing-200);
+  padding-block: var(--spacing-200) var(--spacing-500);
+  border-radius: var(--spacing-200);
+}
+.content img {
+  border-radius: 10px;
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  text-align: center;
+}
+h1 {
+  font-size: 22px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  color: var(--slate-900);
+}
+p {
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: var(--slate-500);
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--white);
+  padding-block: var(--spacing-300);
+  padding-inline: var(--spacing-300);
+}
+.attribution {
+  color: var(--slate-500);
+  text-align: center;
+}
+.attribution a {
+  color: var(--slate-900);
+}
